@@ -1,0 +1,1 @@
+This folder contains the pages files. These can be written in either Markdown or HTML and are processed by Jekyll. See: https://jekyllrb.com/docs/pages/

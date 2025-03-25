@@ -1,0 +1,12 @@
+{
+  "name": "openelis.fhir.template",
+  "version": "1.0.0",
+  "type": "fhir.template",
+  "license": "CC-BY-SA-3.0",
+  "description": "Local template extension for FHIR IG",
+  "author": "https://openelis.org",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  }
+}

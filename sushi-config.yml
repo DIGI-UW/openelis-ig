@@ -1,0 +1,70 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: ig.openelis.org
+canonical: http://openelis.org/fhir
+name: OpenELIS
+title: OpenELIS FHIR Implementation Guide
+description: >-
+  The implementation guide for OpenELIS's FHIR profiles.
+status: draft  # draft | active | retired | unknown
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+
+publisher:
+  name: OpenELIS Foundation
+  url: https://openelis.org/
+
+license: CC0-1.0
+date: 2025-03-25
+copyrightyear: 2025+
+releaseLabel: CI Build
+version: 0.1.0
+fhirVersion: 4.0.1
+
+# The dependencies property corresponds to IG.dependsOn. The key is the
+# package id and the value is the version (or dev/current). For advanced
+# use cases, the value can be an object with keys for id, uri, and version.
+#
+dependencies:
+  hl7.fhir.us.core: 7.0.0
+
+pages:
+  index.md:
+    title: Home
+  profiles-and-extensions.md:
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  downloads.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
+  changes.md:
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+
+menu:
+  Home: index.html
+  FHIR Arifacts: #artifact.html
+    Profiles: profiles-and-extension.html#profiles
+    Extensions: profiles-and-extensions.html#extensions
+  Downloads: downloads.html
+  Change Log: changes.html
+
+parameters:
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pageconent
+    - fsh-generated/includes
+  apply-contact: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
