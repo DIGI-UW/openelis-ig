@@ -6,12 +6,15 @@ RUN apt-get update && apt-get install -y \
   ruby-full \
   build-essential \
   nodejs \
+  dos2unix \
   npm && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /ig
 
 COPY _updatePublisher.sh /ig/_updatePublisher.sh
 COPY _genonce.sh /ig/_genonce.sh
+
+RUN dos2unix /ig/_genonce.sh /ig/_updatePublisher.sh
 
 RUN chmod +x /ig/_genonce.sh /ig/_updatePublisher.sh
 
