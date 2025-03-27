@@ -15,7 +15,7 @@ COPY _genonce.sh ./_genonce.sh
 
 RUN chmod +x _genonce.sh _updatePublisher.sh
 
-RUN ./_updatePublisher.sh -y
+RUN bash _updatePublisher.sh -y
 
 RUN gem install jekyll
 
