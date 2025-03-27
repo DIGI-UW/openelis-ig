@@ -10,12 +10,12 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /ig
 
-COPY _updatePublisher.sh ./_updatePublisher.sh
-COPY _genonce.sh ./_genonce.sh
+COPY _updatePublisher.sh /ig/_updatePublisher.sh
+COPY _genonce.sh /ig/_genonce.sh
 
-RUN chmod +x _genonce.sh _updatePublisher.sh
+RUN chmod +x /ig/_genonce.sh /ig/_updatePublisher.sh
 
-RUN bash _updatePublisher.sh -y
+RUN bash /ig/_updatePublisher.sh -y
 
 RUN gem install jekyll
 
