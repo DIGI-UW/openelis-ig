@@ -14,7 +14,7 @@ WORKDIR /ig
 COPY _updatePublisher.sh /ig/_updatePublisher.sh
 COPY _genonce.sh /ig/_genonce.sh
 
-RUN dos2unix /ig/_genonce.sh /ig/_updatePublisher.sh
+RUN dos2unix -ascii /ig/_genonce.sh /ig/_updatePublisher.sh
 
 RUN chmod +x /ig/_genonce.sh /ig/_updatePublisher.sh
 
