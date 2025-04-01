@@ -26,10 +26,10 @@ RUN npm install -g fsh-sushi
 
 RUN sushi -v
 
-COPY ./input /ig/input
-COPY ./local-template /ig/local-template
 COPY ig.ini /ig/ig.ini
+COPY ./local-template /ig/local-template
 COPY sushi-config.yaml /ig/sushi-config.yaml
+COPY ./input /ig/input
 
 VOLUME /ig/output
 
