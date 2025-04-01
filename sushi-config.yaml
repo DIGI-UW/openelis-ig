@@ -41,20 +41,26 @@ pages:
         valueCode: informative
   downloads.md:
     extension:
-    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      valueCode: informative
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   changes.md:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  indices.md:
+    title: Indices
+    artifacts.html:
+      title: Artifact Index
 
 menu:
   Home: index.html
   FHIR Arifacts: #artifact.html
-    Profiles: profiles-and-extension.html#profiles
+    Profiles: profiles-and-extensions.html#profiles
     Extensions: profiles-and-extensions.html#extensions
   Downloads: downloads.html
   Change Log: changes.html
+  Indices:
+    Artifact Index: artifacts.html
 
 parameters:
   path-resource:
